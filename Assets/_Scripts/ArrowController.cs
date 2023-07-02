@@ -6,6 +6,7 @@ public class ArrowController : MonoBehaviour
 {
     [SerializeField] private GameObject midPointVisual, arrowPrefab, arrowSpawnPoint;
     [SerializeField] private float arrowMaxSpeed = 10f;
+    [SerializeField] private AudioSource bowReleaseAudioSource;
 
     public void PrepareArrow()
     {
@@ -14,6 +15,7 @@ public class ArrowController : MonoBehaviour
 
     public void ReleaseArrow(float strength)
     {
+        bowReleaseAudioSource.Play();
         midPointVisual.SetActive(false);
 
         GameObject arrow = Instantiate(arrowPrefab);

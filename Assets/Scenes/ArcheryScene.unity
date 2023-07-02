@@ -1243,6 +1243,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 540063312}
   handAnimation: {fileID: 0}
+--- !u!82 &554000008 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2691508198873870724, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7580245839231598721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &584150697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1090576850609717743, guid: 83f2fb912e45e5f4c86955ea046b60e0,
@@ -1778,6 +1784,12 @@ Transform:
   m_Father: {fileID: 1701807433}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1265984948 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7313731630524774211, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7580245839231598721}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1357068078
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,16 +3103,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2691508198873870724, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4901039910562826044, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 554000008}
     - target: {fileID: 5317378661381864660, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7313731630524774211, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7806388649974421249, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
         type: 3}
       propertyPath: arrowSpawnPoint
       value: 
       objectReference: {fileID: 7580245839231598722}
+    - target: {fileID: 7806388649974421249, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
+        type: 3}
+      propertyPath: bowReleaseAudioSource
+      value: 
+      objectReference: {fileID: 1265984948}
     - target: {fileID: 8646426851874158662, guid: 26dfe3176a7e9ac4296e41c568e53fa9,
         type: 3}
       propertyPath: m_RootOrder
