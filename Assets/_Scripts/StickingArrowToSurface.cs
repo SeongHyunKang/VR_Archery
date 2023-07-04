@@ -30,7 +30,7 @@ public class StickingArrowToSurface : MonoBehaviour
             Debug.Log("IHittable component found!");
             if (collision.gameObject.CompareTag("Target"))
             {
-                GameManager.instance.IncreaseScore(1);
+                GameManager.instance.IncreaseScore();
                 Debug.Log("Target hit!");
             }
         }

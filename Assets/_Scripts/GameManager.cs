@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
 
-    public void IncreaseScore(int amount)
+    public void IncreaseScore()
     {
-        score += amount;
+        score++;
         UpdateScoreDisplay();
     }
 
