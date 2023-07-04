@@ -9,6 +9,18 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     [SerializeField] private TextMeshProUGUI scoreDisplay;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void IncreaseScore()
     {
         score++;
