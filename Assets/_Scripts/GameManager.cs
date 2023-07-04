@@ -29,6 +29,6 @@ public class GameManager : MonoBehaviour
 
     private void UpdateScoreDisplay()
     {
-        scoreDisplay.text = "Score: " + score;
+        scoreDisplay.text = "Score : " + score;
     }
 }

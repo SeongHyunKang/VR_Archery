@@ -22,7 +22,7 @@ public class TimerDisplay : MonoBehaviour
         if (isTimerRunning)
         {
             timeLimit -= Time.deltaTime;
-            text_timer.text = "Time Left: " + Mathf.Round(timeLimit) + "s";
+            text_timer.text = "Time Left : " + Mathf.Round(timeLimit) + "s";
 
             if (timeLimit <= 0f)
             {
