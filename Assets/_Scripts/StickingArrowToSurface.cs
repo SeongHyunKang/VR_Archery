@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StickingArrowToSurface : MonoBehaviour
 {
@@ -17,12 +18,28 @@ public class StickingArrowToSurface : MonoBehaviour
         arrow.transform.position = transform.position;
         arrow.transform.forward = transform.forward;
 
-        if(collision.collider.attachedRigidbody != null)
+        if (collision.collider.attachedRigidbody != null)
         {
             arrow.transform.parent = collision.collider.attachedRigidbody.transform;
         }
-        collision.collider.GetComponent<IHittable>()?.GetHit();
+
+        IHittable hittableComponent = collision.collider.GetComponent<IHittable>();
+        if (hittableComponent != null)
+        {
+            hittableComponent.GetHit();
+            Debug.Log("IHittable component found!");
+            if (collision.gameObject.CompareTag("Target"))
+            {
+                GameManager.instance.IncreaseScore(1);
+                Debug.Log("Target hit!");
+            }
+        }
+        else
+        {
+            Debug.Log("IHittable component not found!");
+        }
 
         Destroy(gameObject);
     }
 }
+

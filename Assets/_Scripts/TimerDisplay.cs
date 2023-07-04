@@ -10,6 +10,7 @@ public class TimerDisplay : MonoBehaviour
     public TextMeshProUGUI text_timer;
     public TextMeshProUGUI gameoverMessage;
     private bool isTimerRunning = true;
+    [SerializeField] private GameObject[] target;
 
     void Start()
     {
@@ -28,6 +29,12 @@ public class TimerDisplay : MonoBehaviour
                 isTimerRunning = false;
                 text_timer.gameObject.SetActive(false);
                 gameoverMessage.gameObject.SetActive(true);
+
+                foreach (GameObject obj in target)
+                {
+                    obj.SetActive(false);
+                }
+
                 StartCoroutine(RestartSceneAfterDelay(5f));
             }
         }

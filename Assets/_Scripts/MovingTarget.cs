@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 
+
 public class MovingTarget : MonoBehaviour, IHittable
 {
     private Rigidbody rb;
@@ -16,8 +17,6 @@ public class MovingTarget : MonoBehaviour, IHittable
     [SerializeField] private AudioSource audioSource;
 
     [SerializeField] private float arriveThreshold, movementRadius = 2, speed = 1;
-
-    public int score = 0;
 
     private void Awake()
     {
@@ -36,8 +35,6 @@ public class MovingTarget : MonoBehaviour, IHittable
         if ((rb.isKinematic || collision.gameObject.CompareTag("Arrow")) == false)
         {
             audioSource.Play();
-            score++;
-            Debug.Log("Score: " + score);
         }
     }
 
